@@ -1,3 +1,5 @@
+// import 'core-js/stable'
+// import 'regenerator-runtime/runtime'
 import React from 'react';
 import * as serviceWorker from './serviceWorker';
 import ReactDOM from 'react-dom';
@@ -5,12 +7,12 @@ import { Provider } from 'react-redux'
 
 import store from './store'
 import App from './App';
-import './index.css';
+import './index.scss';
 
 ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
 document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

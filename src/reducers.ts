@@ -1,7 +1,11 @@
-import { combineReducers } from 'redux'
+import { ReducersMapObject, combineReducers } from 'redux'
 
-const rootReducer = combineReducers({
+import searchReducer from './search/reducer'
+import { ApplicationState } from './reducers.interfaces'
 
-})
+const appReducer: ReducersMapObject<ApplicationState, any> = {
+  search: searchReducer
+}
 
-export default rootReducer
+export default combineReducers(appReducer)
+
